@@ -15,6 +15,6 @@ class Board {
         bool IsCellEmpty(int row,int col) const;
         int GetCell(int row,int col) const;
         int ClearFullRows();
-        void PlaceBlock(const Block& block);
+        bool PlaceBlock(const Block& block);
         const std::array<std::array<int, COL>, ROW>& GetGrid() const;
 };
