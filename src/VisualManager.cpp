@@ -76,3 +76,23 @@ Color VisualManager::GetGridColor() const {
 Color VisualManager::GetGhostColor() const {
     return GhostColor;
 }
+Color VisualManager::GetBlockColor(const BlockType& type) const {
+    switch(type) {
+        case BlockType::L:
+            return {108,142,191,1};
+        case BlockType::J:
+            return {245,176,65,1};
+        case BlockType::Z:
+            return {230,176,170,1};
+        case BlockType::O:
+            return {246,211,101,1};
+        case BlockType::S:
+            return {130,224,170,1};
+        case BlockType::T:
+            return {187,143,206,1};
+        case BlockType::I:
+            return {120,224,224,1};
+        default:
+            return {};
+    }
+}

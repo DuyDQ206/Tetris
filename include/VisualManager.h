@@ -23,4 +23,5 @@ class VisualManager {
         Color GetBackgroundColor() const;
         Color GetGridColor() const;
         Color GetGhostColor() const;
+        Color GetBlockColor(const BlockType& type) const;
 };
