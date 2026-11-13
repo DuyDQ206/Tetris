@@ -15,6 +15,10 @@ enum class BlockType {
 struct Cell {
     int r, c;
 };
+struct BlockSize {
+    int width;
+    int height;
+};
 
 class Block {
     private:
@@ -35,4 +39,5 @@ class Block {
         void Rotate();
         void Move(int rowOffset=0,int colOffset=0);
         void Reset();
+        BlockSize GetBlockSize() const;
 };

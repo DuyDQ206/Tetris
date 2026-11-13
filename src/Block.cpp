@@ -12,6 +12,22 @@ Block::Block(BlockType T)
     : Type(T), Row(0), Col(4), Rotation(0) {
     this->InitializeCells();
 }
+BlockSize Block::GetBlockSize() const {
+    switch(Type) {
+        case BlockType::I:
+            return {4,4};
+        case BlockType::O:
+            return {2,2};
+        case BlockType::J:
+        case BlockType::L:
+        case BlockType::S:
+        case BlockType::Z:
+        case BlockType::T:
+            return {3,3};
+        default:
+        return {};
+    }
+}
 int Block::GetID() const {
     return static_cast<int>(this->Type);
 }
