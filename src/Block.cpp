@@ -1,7 +1,13 @@
 #include "Block.h"
 
 
-
+Block::Block() {
+    Row = 0;
+    Col = 4;
+    Rotation = 0;
+    Type = BlockType::None;
+    InitializeCells();
+}
 Block::Block(BlockType T) 
     : Type(T), Row(0), Col(4), Rotation(0) {
     this->InitializeCells();

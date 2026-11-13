@@ -24,6 +24,7 @@ class Block {
         std::array<Cell,4> cells;
         void InitializeCells();
     public:
+        Block();
         Block(BlockType T);
         int GetRow() const;
         int GetCol() const;
