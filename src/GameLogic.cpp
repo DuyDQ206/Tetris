@@ -108,14 +108,10 @@ void GameLogic::RotateBlock() {
     }
 }
 void GameLogic::HardDrop() {
-    while(true) {
-        Block temp = currentBlock;
-        temp.Move(1,0);
-        while(CanMoveDown()) {
-            MoveDown();
-        }
-        HandleBlockLanding();
+    while(CanMoveDown()) {
+        MoveDown();
     }
+    HandleBlockLanding();
 }
 
 // Block replacement
